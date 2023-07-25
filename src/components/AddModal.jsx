@@ -6,6 +6,12 @@ import { useState } from "react";
 function AddModal({ show, handleClose }) {
     const [name,setName]=useState("")
     const [date,setDate]=useState(new Date().toISOString().slice(0,10))
+
+    const handleSubmit = (e) =>{
+        e.preventDefault()
+        
+        handleClose()
+    }
     console.log(name,date)
   return (
     <>
@@ -14,7 +20,7 @@ function AddModal({ show, handleClose }) {
           <Modal.Title>Appointment for...</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form>
+          <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Patient Name</Form.Label>
               <Form.Control type="text" placeholder="Enter name" onChange={(e)=> setName(e.target.value)} value={name} />

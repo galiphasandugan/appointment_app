@@ -1,9 +1,9 @@
-
+import { AiTwotoneDelete } from 'react-icons/ai';
 
 function App() {
   return (
     <div className="App">
-      <h1>Lorem, ipsum dolor.</h1>
+     <AiTwotoneDelete className='text-danger fs-'/>
     </div>
   );
 }

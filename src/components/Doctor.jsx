@@ -8,6 +8,7 @@ import { useState } from "react"
 
 const Doctor = ({apps , setApps}) => {
     const [show, setShow] = useState(false);
+    const [drname ,setDrName] = useState("")
 
   return (
     <div>
@@ -17,14 +18,20 @@ const Doctor = ({apps , setApps}) => {
 
         {doctorData.map(({id,name,dep,img})=>(
         <Col xs={6} sm={4} md={3} key={id}>
-            <img onClick={() => setShow(true)} src={img} alt="" className="img-thumbnail doctor-img" />
+            <img 
+            onClick={() =>{
+              setDrName(name)
+              setShow(true)
+             
+            }} 
+            src={img} alt="" className="img-thumbnail doctor-img" />
             <h5>{name}</h5>
             <h6>{dep}</h6>
         </Col>
         ))}
 
         </Row>
-        <AddModal apps={apps} setApps={setApps} show={show} handleClose={()=> setShow(false)}  />
+        <AddModal drname={drname} apps={apps} setApps={setApps} show={show} handleClose={()=> setShow(false)}  />
       </Container>
       
     </div>

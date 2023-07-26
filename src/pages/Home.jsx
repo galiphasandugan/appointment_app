@@ -13,6 +13,6 @@ const Home = () => {
       <AppointmentList apps = {appointment}  />
     </main>
   )
-}
+} 
 
 export default Home

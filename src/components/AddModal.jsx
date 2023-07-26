@@ -11,13 +11,12 @@ function AddModal({drname, apps, setApps, show, handleClose }) {
         e.preventDefault()
         setApps([...apps, 
           {
-          id:apps.length + 1,
+          id:new Date(),
           patient:name,
           day:date,
           consulted:false,
           doctor:drname,
-        }
-      ])
+        }])
         handleClose()
     }
     console.log(name,date)

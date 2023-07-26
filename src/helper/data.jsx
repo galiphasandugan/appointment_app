@@ -20,6 +20,13 @@ export const appointmentData = [
       consulted: true,
       doctor: "Dr. Jasmine Carpanter",
     },
+    {
+      id: 3,
+      patient: "Aaron Black",
+      day: new Date().toISOString().slice(0,10),
+      consulted: true,
+      doctor: "Dr. Jasmine Carpanter",
+    }
   ]
   
   export const doctorData = [

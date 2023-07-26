@@ -16,7 +16,7 @@ const AppointmentList = ({ apps }) => {
           key={id}
           className={consulted ? "appointments consulted" : "appointments"}
         >
-          <Row className="justify-content-center align-item-center">
+          <Row className="justify-content-between align-item-center">
             <Col xs={12} sm={12} md={6} >
               <h4>{patient}</h4>
               <h5>{doctor}</h5>

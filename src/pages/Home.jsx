@@ -9,8 +9,8 @@ const Home = () => {
   return (
     <main className="text-center mt-2">
       <h1 className="text-danger display-5">CLARUS HOSPITAL</h1>
-      <Doctor />
-      <AppointmentList apps ={appointmentData} />
+      <Doctor  apps ={appointment} setApps ={setAppointment}/>
+      <AppointmentList apps = {appointment}  />
     </main>
   )
 }

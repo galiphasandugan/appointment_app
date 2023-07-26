@@ -6,7 +6,7 @@ import AddModal from "./AddModal"
 import { useState } from "react"
 
 
-const Doctor = () => {
+const Doctor = ({apps , setApps}) => {
     const [show, setShow] = useState(false);
 
   return (
@@ -24,7 +24,7 @@ const Doctor = () => {
         ))}
 
         </Row>
-        <AddModal show={show} handleClose={()=> setShow(false)}  />
+        <AddModal apps={apps} setApps={setApps} show={show} handleClose={()=> setShow(false)}  />
       </Container>
       
     </div>

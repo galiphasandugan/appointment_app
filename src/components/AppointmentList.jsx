@@ -4,7 +4,7 @@ import Col from "react-bootstrap/Col"
 import { TiDelete } from "react-icons/ti"
 
 const AppointmentList = ({ apps, setApps }) => {
-  console.log(apps)
+
 
   const handleDelete = (id) => {
     setApps(apps.filter((item) => item.id !== id))

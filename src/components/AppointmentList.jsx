@@ -13,7 +13,7 @@ const AppointmentList = ({ apps, setApps }) => {
   const handleDoubleClick = (id) => {
     setApps(
       apps.map((item) =>
-        item.id == id ? { ...item, consulted: !item.consulted } : item
+        item.id === id ? { ...item, consulted: !item.consulted } : item
       )
     )
   }
@@ -23,7 +23,7 @@ const AppointmentList = ({ apps, setApps }) => {
       <h3 className="display-6 mb-2" style={{ color: "rgb(166, 18, 189)" }}>
         Appointment List
       </h3>
-      {apps.length < 1 && <img src="./img/appointment.jpg" width="70%" />}
+      {apps.length < 1 && <img src="./img/appointment.jpg" alt="backgroundimage" width="70%" />}
 
       {apps.map(({ id, patient, consulted, doctor, day }) => (
         <div
